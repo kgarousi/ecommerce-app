@@ -35,9 +35,11 @@ export default function RootLayout({ children }) {
           </Link>
         </footer>
         <div id="portal"></div>
+        <Modal /> {/* Ensure Modal is correctly imported and used */}
       </body>
     </html>
   );
 }
+
 
 

@@ -7,6 +7,7 @@ import Modal from './Modal'
 export default function Header() {
   const cartItems = useCart(state => state.cart);
   const openModal = useCart(state => state.openModal);
+  const handleOpenModal = useCart(state => state.setOpenModal)
 
   return (
     <div>
@@ -15,7 +16,7 @@ export default function Header() {
         <Link href='/'>
           <h1 className="uppercase cursor-pointer hover:scale-110">SHOP</h1>
         </Link>
-        <div className='relative grid place-items-center'>
+        <div onClick={handleOpenModal} className='relative grid place-items-center'>
           {cartItems.length > 0 && (
             <div className='absolute aspect-square h-5 grid place-items-center top-0 bg-blue-400 text-white rounded-full right-0 -translate-y-1/2 translate-x-1/2'>
               <p className='text-sm'>{cartItems.length}</p>
