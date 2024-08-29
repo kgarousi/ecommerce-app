@@ -4,6 +4,15 @@ export const useCart = create(
     (set,get) => ({
         cart: [],
         product: {},
+        openModal: true, 
+        setOpenModal: () =>{
+            set((state) =>{
+                return {
+                    ...state,
+                    openModal: !state.openModal
+                }
+            })
+        },
         setProduct: (params) => {
             const {newProduct} = params
             set((state) => {
