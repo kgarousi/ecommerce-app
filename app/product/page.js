@@ -6,7 +6,16 @@ export default function ProductPage(props) {
     const {price_id} = props
     const product = useCart(state => state.product)
     const {cost, productInfo, name, description} = product
-    console.log(product)
+    const addItemToCart = useCart(state => state.addItemToCart)
+
+    function handleAddToCart() {
+        const newItem = {
+            quantity: 1,
+            price_id: price_id
+        }
+        addItemToCart({newItem})
+    }
+
     return (
         <div className="flex flex-col">
             <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-[1500px] mx-auto gap-4">
@@ -19,7 +28,7 @@ export default function ProductPage(props) {
                     <h3 className="text-2xl font-bold">{name}</h3>
                     <p className="text-lg font-semibold">${cost / 100}</p>
                     <p className="text-sm flex-1">{description}</p>
-                    <button className="bg-slate-700 text-white hover:bg-slate-500 cursor-pointer ml-auto px-4 py-2">Add to Cart</button>
+                    <button onClick={handleAddToCart} className="bg-slate-700 text-white hover:bg-slate-500 cursor-pointer ml-auto px-4 py-2">Add to Cart</button>
                 </div>
             </div>
         </div>

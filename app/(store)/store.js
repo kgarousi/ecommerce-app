@@ -20,7 +20,7 @@ export const useCart = create(
                 const newCart = [...state.cart, newItem]
                 return {
                     ...state,
-                    cat: newCart
+                    cart: newCart
                 }
             })
         },
