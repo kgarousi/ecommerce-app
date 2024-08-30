@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import useCart from '../(store)/store'; // Adjust path if necessary
+import useCart from '../(store)/store'; 
 import { useRouter } from 'next/navigation';
 
 export default function ProductPage({ searchParams }) {
