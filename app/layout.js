@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
         <div className="flex-1">
           {children}
         </div>
-        <footer className="flex items-center flex-wrap justify-center border-t border-solid border-slate-300 p-4 md:p-8">
+        <footer className="flex items-center flex-wrap justify-center border-t border-solid border-slate-300 sm:p-2 p-4 md:p-8">
           <Link href="https://www.instagram.com/kendallgarousi/" target="_blank">
-            <i className="fa-brands fa-instagram hover:text-slate-500 cursor-pointer p-4 text-3xl md:text-4xl"></i>
+            <i className="fa-brands fa-instagram hover:text-slate-500 cursor-pointer sm:p-2 md:p-4 text-3xl md:text-4xl"></i>
           </Link>
         </footer>
         <div id="portal"></div>

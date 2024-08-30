@@ -49,13 +49,13 @@ export default function ProductPage({ searchParams }) {
 
     return (
         <div className="flex flex-col">
-            <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-[1200px] mx-auto gap-4">
+            <div className="grid grid-cols-1 sm:gird-cols-1 md:grid-cols-2 w-full max-w-[1200px] mx-auto gap-4">
                 {/* Image Container */}
                 <div className="relative w-full h-full">
                     <img src={images[0]} alt={name} className='w-full h-full object-cover' />
                 </div>
                 {/* Text Container */}
-                <div className="flex flex-col gap-4 p-4">
+                <div className="flex flex-col gap-4 p-4 ">
                     <h3 className="text-2xl font-bold">{name}</h3>
                     <p className="text-lg font-semibold">${cost / 100}</p>
                     <p className="text-sm flex-1">{description}</p>
