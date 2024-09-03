@@ -3,8 +3,6 @@ import Stripe from "stripe"
 
 export async function POST(request){
 
-
-   // if(request.method != 'POST'){return res.sendStatustatus(405)}
     const body = await request.json()
     
     if(body.lineItems.length === 0){
