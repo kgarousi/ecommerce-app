@@ -55,7 +55,7 @@ export default function ProductPage({ searchParams }) {
                     <img src={images[0]} alt={name} className='w-full h-full object-cover' />
                 </div>
                 {/* Text Container */}
-                <div className="flex flex-col gap-4 p-4 ">
+                <div className="flex flex-col gap-4 sm:p-2 p-4 ">
                     <h3 className="text-2xl font-bold">{name}</h3>
                     <p className="text-lg font-semibold">${cost / 100}</p>
                     <p className="text-sm flex-1">{description}</p>
