@@ -49,7 +49,7 @@ export default function ProductPage({ searchParams }) {
 
     return (
         <div className="flex flex-col">
-            <div className="grid grid-cols-1 sm:gird-cols-1 md:grid-cols-2 w-full max-w-[1200px] mx-auto gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 w-full max-w-[1200px] mx-auto gap-4">
                 {/* Image Container */}
                 <div className="relative w-full h-full">
                     <img src={images[0]} alt={name} className='w-full h-full object-cover' />
